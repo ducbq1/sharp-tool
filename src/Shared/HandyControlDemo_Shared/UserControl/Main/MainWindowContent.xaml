@@ -9,7 +9,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition x:Name="ColumnDefinitionLeft" Width="240" MinWidth="240" MaxWidth="400"/>
-            <ColumnDefinition MinWidth="200"/>
+            <ColumnDefinition MinWidth="200" Width="*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="ButtonShiftOut" Click="OnLeftMainContentShiftOut" hc:IconElement.Geometry="{StaticResource LeftGeometry}" Padding="8 8 0 8" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 26 -16 0" Style="{StaticResource ButtonIconCircular}" />
         <userControl:MainContent Grid.Column="1" x:Name="MainContent" />

@@ -5,7 +5,11 @@
     <hc:SimplePanel>
         <Border Name="BorderRootEffect" Background="{DynamicResource RegionBrush}" CornerRadius="10" Effect="{StaticResource EffectShadow4}" Margin="16" Visibility="Collapsed"/>
         <Border Name="BorderRoot" Style="{StaticResource BorderClip}" Margin="16">
-            <Grid Name="GridMain" MinHeight="300" MinWidth="200" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid Name="GridMain"
+                  MinHeight="300"
+                  MinWidth="200"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition/>
@@ -23,7 +27,49 @@
                     </hc:SimplePanel>
                 </Border>
                 <Border Grid.Row="1" ClipToBounds="True">
-                    <ContentPresenter Name="PresenterMain" Margin="0,0,0,10" Content="{Binding SubContent}"/>
+                    <hc:TabControl Grid.Row="1"
+                                   x:Name="TabControlDemo"
+                                   IsAnimationEnabled="True"
+                                   ShowCloseButton="True"
+                                   IsDraggable="True"
+                                   IsTabFillEnabled="True">
+                        <hc:TabItem Header="TabItem1"
+                                    hc:IconElement.Height="16"
+                                    hc:IconElement.Width="16"
+                                    hc:IconElement.Geometry="{StaticResource ConfigGeometry}">
+                            <hc:SimplePanel Background="{DynamicResource RegionBrush}" />
+                        </hc:TabItem>
+                        <hc:TabItem IsSelected="True"
+                                    Header="TabItem2"
+                                    hc:IconElement.Height="16"
+                                    hc:IconElement.Width="16"
+                                    hc:IconElement.Geometry="{StaticResource CalendarGeometry}">
+                            <ContentPresenter Name="PresenterMain"
+                                              Margin="0,0,0,10"
+                                              Content="{Binding SubContent}" />
+                        </hc:TabItem>
+                        <hc:TabItem Header="TabItem3"
+                                    hc:IconElement.Height="16"
+                                    hc:IconElement.Width="16"
+                                    hc:IconElement.Geometry="{StaticResource WindowsGeometry}">
+                            <hc:SimplePanel Background="#FF3F4EE8" />
+                        </hc:TabItem>
+                        <hc:TabItem Header="TabItem4"
+                                    hc:IconElement.Height="16"
+                                    hc:IconElement.Width="16"
+                                    hc:IconElement.Geometry="{StaticResource ClockGeometry}">
+                            <hc:SimplePanel Background="#FFE83F6D" />
+                        </hc:TabItem>
+                        <hc:TabItem Header="TabItem5">
+                            <hc:SimplePanel Background="#FFB23FE8" />
+                        </hc:TabItem>
+                        <hc:TabItem Header="TabItem6">
+                            <hc:SimplePanel Background="#FF3FE8E8" />
+                        </hc:TabItem>
+                        <hc:TabItem Header="TabItem7">
+                            <hc:SimplePanel Background="#FFE8E03F" />
+                        </hc:TabItem>
+                    </hc:TabControl>
                 </Border>
             </Grid>
         </Border>
