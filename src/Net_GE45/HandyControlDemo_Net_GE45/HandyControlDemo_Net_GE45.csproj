@@ -196,6 +196,9 @@
     <Resource Include="..\..\Shared\HandyControlDemo_Shared\Resources\Img\Flag\ko-KR.png">
       <Link>Resources\Img\Flag\ko-KR.png</Link>
     </Resource>
+    <Resource Include="..\..\Shared\HandyControlDemo_Shared\Resources\Img\Flag\vi-VN.png">
+      <Link>Resources\Img\Flag\vi-VN.png</Link>
+    </Resource>
     <Resource Include="..\..\Shared\HandyControlDemo_Shared\Resources\Img\Flag\pt-BR.png">
       <Link>Resources\Img\Flag\pt-BR.png</Link>
     </Resource>
@@ -282,6 +285,9 @@
     <EmbeddedResource Include="..\..\Shared\HandyControlDemo_Shared\Properties\Langs\Lang.ko-KR.resx">
       <Link>Properties\Langs\Lang.ko-KR.resx</Link>
     </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Shared\HandyControlDemo_Shared\Properties\Langs\Lang.vi-VN.resx">
+      <Link>Properties\Langs\Lang.vi-VN.resx</Link>
+    </EmbeddedResource>
     <EmbeddedResource Include="..\..\Shared\HandyControlDemo_Shared\Properties\Langs\Lang.pt-BR.resx">
       <Link>Properties\Langs\Lang.pt-BR.resx</Link>
     </EmbeddedResource>
@@ -329,6 +335,7 @@
       rd /s /q Langs\fr
       rd /s /q Langs\ja
       rd /s /q Langs\ko-KR
+      rd /s /q Langs\vi-VN
       rd /s /q Langs\pt-BR
       rd /s /q Langs\pl
       rd /s /q Langs\ru
@@ -340,6 +347,7 @@
       move fr Langs
       move ja Langs
       move ko-KR Langs
+      move vi-VN Langs
       move pt-BR Langs
       move pl Langs
       move ru Langs
